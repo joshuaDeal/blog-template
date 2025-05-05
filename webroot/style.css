@@ -1,0 +1,285 @@
+/* Dark Mode Styles */
+
+/* Basic styles */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: #121212; /* Dark background */
+	color: #e0e0e0; /* Light text color */
+}
+
+/* Header */
+header {
+	background: #1f1f1f; /* Darker header */
+	color: #ffffff;
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+nav ul li {
+	margin: 0 10px;
+}
+
+nav ul li a {
+	color: #ffffff; /* Light link color */
+	text-decoration: none;
+}
+
+.search-container input {
+	padding: 5px;
+	background: #333; /* Dark input background */
+	color: #e0e0e0; /* Light text */
+	border: 1px solid #555; /* Border color */
+}
+
+/* Button styles */
+button {
+	background: #333; /* Dark button background */
+	border: none;
+	cursor: pointer;
+	color: #e0e0e0; /* Light text */
+}
+
+/* Article section */
+article {
+	background: #1e1e1e; /* Dark background for articles */
+	padding: 20px;
+	margin: 20px auto;
+	width: 60%;
+	border-radius: 5px;
+}
+
+/* Category styles */
+.catagory ul {
+	list-style: none;
+	padding: 0;
+}
+
+.catagory ul li {
+	border-bottom: 1px solid #444; /* Subtle separator */
+	padding: 10px 0;
+}
+
+h1, h2, h3 {
+	color: #e0e0e0; /* Light heading colors */
+}
+
+/* Footer */
+footer {
+	text-align: center;
+	padding: 10px;
+	background: #1f1f1f; /* Dark footer */
+	color: #ffffff;
+}
+
+/* Comments Section */
+#comments {
+	background: #1e1e1e; /* Dark comment background */
+	padding: 20px;
+	margin: 20px auto;
+	width: 60%;
+	border-radius: 5px;
+	box-shadow: none; /* Remove shadow for dark mode */
+}
+
+/* Comments Form */
+#create-comment {
+	background: #333; /* Dark background for form */
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: none; /* Remove shadow */
+}
+
+#create-comment label {
+	font-weight: bold;
+	margin-top: 10px;
+	display: block;
+	color: #e0e0e0; /* Light label color */
+}
+
+#create-comment input,
+#create-comment textarea {
+	width: 95%;
+	padding: 8px;
+	margin-top: 5px;
+	border: 1px solid #555; /* Soft border */
+	background: #444; /* Dark background for input */
+	color: #e0e0e0; /* Light text */
+}
+
+#create-comment input[type="submit"] {
+	background: #007BFF; /* Primary button color */
+	color: white;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+#create-comment input[type="submit"]:hover {
+	background: #0056b3; /* Darker blue on hover */
+}
+
+/* Captcha */
+.captcha {
+	margin-top: 15px;
+}
+
+.captcha img {
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+/* Comments List */
+.comments-list ul {
+	list-style: none;
+	padding: 0;
+}
+
+.comments-list li {
+	background: #252525; /* Dark background for comments */
+	padding: 15px;
+	margin-top: 10px;
+	border-radius: 5px;
+	border-left: 4px solid #007BFF; /* Blue left border */
+}
+
+.comments-list strong {
+	font-size: 16px;
+	color: #ffffff; /* Light color for strong text */
+}
+
+.comments-list em {
+	font-size: 14px;
+	color: #aaa; /* Light gray for em text */
+}
+
+.comments-list p {
+	font-size: 14px;
+	color: #e0e0e0; /* Light color for paragraph text */
+	margin-top: 5px;
+}
+
+/* Author Profile Section */
+#author {
+	background: #333;
+	text-align: center;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: none; /* Remove shadow */
+	width: 60%;
+	margin: 20px auto;
+}
+
+#author h1 {
+	font-size: 24px;
+	color: #e0e0e0; /* Light heading color for author */
+	margin-bottom: 10px;
+}
+
+/* Author Profile Image */
+#author img {
+	width: 150px;
+	height: 150px;
+	border: 3px solid #444; /* Dark border */
+	margin-bottom: 15px;
+}
+
+/* Articles by Author Section */
+.catagory {
+	background: #1e1e1e; /* Dark background */
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: none; /* Remove shadow */
+	width: 60%;
+	margin: 20px auto;
+}
+
+.catagory h2 {
+	text-align: center;
+	font-size: 20px;
+	color: #e0e0e0; /* Light heading for categories */
+	margin-bottom: 15px;
+}
+
+/* Author Articles List */
+.catagory ul {
+	list-style: none;
+	padding: 0;
+}
+
+.catagory ul li {
+	background: #333; /* Dark article background */
+	padding: 15px;
+	border-radius: 5px;
+	border-left: 4px solid #007BFF; /* Blue left border */
+	margin-bottom: 10px;
+}
+
+.catagory ul li h3 a {
+	text-decoration: none;
+	color: #e0e0e0; /* Light link color */
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.catagory ul li p {
+	color: #aaa; /* Light gray for paragraph */
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+/* Dark Mode - Search Results Section */
+.search-results {
+	background: #1e1e1e; /* Dark background */
+	padding: 20px;
+	margin: 20px auto;
+	width: 75%;
+	border-radius: 5px;
+	box-shadow: none; /* Remove shadow */
+}
+
+.search-results h2 {
+	font-size: 22px;
+	color: #e0e0e0; /* Light text color */
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+/* Individual Search Results */
+#result {
+	background: #252525; /* Darker background for individual search results */
+	padding: 15px;
+	border-radius: 5px;
+	border-left: 4px solid #007BFF; /* Blue left border */
+	margin-bottom: 10px;
+}
+
+#result h3 a {
+	text-decoration: none;
+	color: #e0e0e0; /* Light text color for links */
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#result p {
+	color: #aaa; /* Lighter gray for paragraph text */
+	font-size: 14px;
+	margin-top: 5px;
+}
+

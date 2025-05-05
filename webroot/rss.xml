@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Blog</title>
+		<link>http://test.example.com</link>
+		<description>RSS feed for blog.</description>
+		<language>en-us</language>
+		<item>
+			<title><![CDATA[Lorem Ipsum]]></title>
+			<link>http://test.example.com/article.php?article=lorem-ipsum</link>
+			<description><![CDATA[Lorem ipsum dolor sit amet.]]></description>
+			<author>Author</author>
+			<pubDate>Mon, 05 May 2025 06:06:47 +0000</pubDate>
+		</item>
+	</channel>
+</rss>
