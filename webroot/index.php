@@ -15,33 +15,13 @@ $sql = "SELECT * FROM articles ORDER BY date DESC";
 $stmt = $db->prepare($sql);
 $stmt->execute();
 $articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$pageTitle = 'Index';
+$pageDescription = 'Index page for blog';
+
+include '/opt/blog/header.php';
 ?>
 
-<!DOCTYPE html>
-<html lang='en'>
-	<head>
-		<title>Blog | Index</title>
-		<meta charset='utf-8'>
-		<meta name='descirption' content='Html page template for blog'>
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<header>
-			<div class="logo">Blog</div>
-			<nav>
-				<ul>
-					<li><a href="index.php">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="rss.xml">RSS Feed</a></li>
-				</ul>
-			</nav>
-			<div class="search-container">
-				<form action="search.php" method="get">
-					<input type="text" placeholder="Search..." aria-label="Search" name="terms">
-					<button type="submit">🔍</button>
-				</form>
-			</div>
-		</header>
 		<article>
 			<section class='catagory'>
 				<?php if ($articles): ?>
@@ -63,8 +43,4 @@ $articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
 				<?php endif; ?>
 			</section>
 		</article>
-		<footer>
-			<p>¯\_(ツ)_/¯</p>
-		</footer>
-	</body>
-</html>
+<?php include '/opt/blog/footer.html';?>

@@ -1,28 +1,8 @@
-<!DOCTYPE html>
-<html lang='en'>
-	<head>
-		<title>Blog | About</title>
-		<meta charset='utf-8'>
-		<meta name='descirption' content="Blog about page.">
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<header>
-			<div class="logo">Blog</div>
-			<nav>
-				<ul>
-					<li><a href="index.php">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="rss.xml">RSS Feed</a></li>
-				</ul>
-			</nav>
-			<div class="search-container">
-				<form action="search.php" method="get">
-					<input type="text" placeholder="Search..." aria-label="Search" name="terms">
-					<button type="submit">🔍</button>
-				</form>
-			</div>
-		</header>
+<?php
+$pageTitle = 'About';
+$pageDescription = 'Blog about page.';
+include '/opt/blog/header.php';
+?>
 		<article>
 			<h1>About</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis vehicula elit vel porttitor. Vestibulum eget libero non elit imperdiet placerat. Aliquam sed orci tempus ex efficitur elementum. Pellentesque eget lectus ut magna venenatis porttitor. Suspendisse sed consectetur velit, at dapibus est. Nullam tempus rutrum mi, a blandit nunc consequat a. Morbi vehicula molestie urna, non tempor libero posuere eu. Cras at urna dictum, sagittis sem vel, tristique eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus sagittis est quis odio ullamcorper efficitur. Donec vitae maximus arcu. Curabitur quis viverra ante. Donec facilisis lacinia risus. Curabitur nec lacus quis mi placerat tincidunt non eu eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisi elit, vestibulum vel sem eget, consequat interdum ante.</p>
@@ -41,8 +21,4 @@
 			<p>In scelerisque, elit vel tempus pharetra, nisl lorem facilisis eros, ut volutpat velit eros eu orci. Quisque egestas a sapien at vehicula. Sed consequat lobortis metus id finibus. Vestibulum facilisis dui consequat nisl aliquet luctus in nec lorem. Etiam viverra dolor tempor velit vulputate fringilla. Donec tristique pellentesque tellus, non tincidunt enim interdum ut. Vestibulum ornare purus vitae ante luctus elementum. In pellentesque tortor neque, at placerat turpis lacinia in. Aliquam erat volutpat. Sed sed feugiat felis. Fusce egestas blandit orci eget lacinia. Nullam et risus in est egestas aliquet. Proin ac euismod justo. Proin ut sollicitudin felis, at finibus mi.</p>
 			<p>Phasellus ac viverra eros, id dignissim risus. Phasellus urna tellus, ultrices viverra porta ut, gravida vel urna. Mauris urna ante, lobortis semper lobortis in, porttitor a metus. Mauris ultrices massa orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse potenti. Nulla in dolor quis libero pellentesque luctus. Cras sapien metus, fringilla et turpis posuere, sodales venenatis velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In ut tortor eu lectus luctus volutpat. Cras faucibus ligula nec sem pharetra, ac suscipit orci volutpat. Donec commodo tortor eget sem accumsan ornare. Sed ligula urna, consectetur ac libero eget, feugiat tristique nibh. Sed eleifend sapien id mattis condimentum. Pellentesque tempus tincidunt tortor id fermentum.</p>
 		</article>
-		<footer>
-			<p>¯\_(ツ)_/¯</p>
-		</footer>
-	</body>
-</html>
+<?php include '/opt/blog/footer.html'; ?>

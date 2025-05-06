@@ -104,33 +104,12 @@ function getResults($searchString) {
 	// Close connection
 	$conn->close();
 }
-?>
 
-<!DOCTYPE html>
-<html lang='en'>
-	<head>
-		<title>Blog | Search</title>
-		<meta charset='utf-8'>
-		<meta name='descirption' content='Search for articles.'>
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<header>
-			<div class="logo">Blog</div>
-			<nav>
-				<ul>
-					<li><a href="index.php">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="rss.xml">RSS Feed</a></li>
-				</ul>
-			</nav>
-			<div class="search-container">
-				<form action="search.php" method="get">
-					<input type="text" placeholder="Search..." aria-label="Search" name="terms">
-					<button type="submit">🔍</button>
-				</form>
-			</div>
-		</header>
+$pageTitle = 'Search';
+$pageDescription = 'Search for articles.';
+
+include '/opt/blog/header.php';
+?>
 		<section class="search-results">
 			<?php
 				//$searchString = "The";
@@ -140,8 +119,4 @@ function getResults($searchString) {
 				echo "</ul>";
 			?>
 		</section>
-		<footer>
-			<p>¯\_(ツ)_/¯</p>
-		</footer>
-	</body>
-</html>
+<?php include '/opt/blog/footer.html'; ?>

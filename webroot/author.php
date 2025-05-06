@@ -69,32 +69,12 @@ function fetchArticleByAuthor($db, $author) {
 }
 
 $articles = fetchArticleByAuthor($db, $author);
+
+$pageTitle = $name;
+$pageDescription = "about author $name";
+
+include '/opt/blog/header.php';
 ?>
-<!DOCTYPE html>
-<html lang='en'>
-	<head>
-		<title>Blog | <?php echo $name; ?></title>
-		<meta charset='utf-8'>
-		<meta name='descirption' content='<?php echo "About author $name."; ?>'>
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<header>
-			<div class="logo">Blog</div>
-			<nav>
-				<ul>
-					<li><a href="index.php">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="RSS Feed">RSS Feed</a></li>
-				</ul>
-			</nav>
-			<div class="search-container">
-				<form action="search.php" method="get">
-					<input type="text" placeholder="Search..." aria-label="Search" name="terms">
-					<button type="submit">🔍</button>
-				</form>
-			</div>
-		</header>
 		<article>
 			<div id="author">
 				<h1><?php echo $name?></h1>
@@ -122,8 +102,4 @@ $articles = fetchArticleByAuthor($db, $author);
 				<?php endif; ?>
 			</section>
 		</article>
-		<footer>
-			<p>¯\_(ツ)_/¯</p>
-		</footer>
-	</body>
-</html>
+<?php include '/opt/blog/footer.html'; ?>

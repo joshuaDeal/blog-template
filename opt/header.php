@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang='en'>
 	<head>
-		<title>Blog | Page Template</title>
+		<title>Blog | <?php echo $pageTitle; ?></title>
 		<meta charset='utf-8'>
-		<meta name='descirption' content='Html page template for blog'>
+		<meta name='descirption' content='<?php echo $pageDescription; ?>'>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
@@ -12,7 +12,7 @@
 			<nav>
 				<ul>
 					<li><a href="index.php">Home</a></li>
-					<li><a href="about.html">About</a></li>
+					<li><a href="about.php">About</a></li>
 					<li><a href="rss.xml">RSS Feed</a></li>
 				</ul>
 			</nav>
@@ -23,8 +23,3 @@
 				</form>
 			</div>
 		</header>
-		<footer>
-			<p>¯\_(ツ)_/¯</p>
-		</footer>
-	</body>
-</html>
