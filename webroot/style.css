@@ -67,7 +67,7 @@ article {
 	background: #1e1e1e; /* Dark background for articles */
 	padding: 20px;
 	margin: 20px auto;
-	width: 60%;
+	width: 65%;
 	border-radius: 5px;
 }
 
@@ -84,6 +84,21 @@ article {
 
 h1, h2, h3 {
 	color: #e0e0e0; /* Light heading colors */
+}
+
+article a {
+	color: #FFD700;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+article a:visited {
+	color: #FFA500;
+}
+
+article a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
 }
 
 /* Footer */
