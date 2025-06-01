@@ -89,7 +89,7 @@ include '/opt/blog/header.php';
 					<input type="email" id="email" name="email"><br>
 					
 					<label for="comment">Comment:</label><br>
-					<textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br>
+					<textarea id="comment" name="comment" rows="4" cols="50" maxlength="500" required></textarea><br>
 
 					<input type="hidden" name="context_id" value="<?php echo $articleId?>">
 
