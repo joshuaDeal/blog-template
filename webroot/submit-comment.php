@@ -1,5 +1,7 @@
 <?php
 
+$maxLength = 500;
+
 $ans = trim(filter_input(INPUT_POST, 'ans', FILTER_SANITIZE_STRING));
 $user_ans = trim(filter_input(INPUT_POST, 'user_ans', FILTER_SANITIZE_STRING));
 
@@ -17,6 +19,11 @@ if ($user_ans == $ans) {
 		$email = trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL));
 		$comment = trim(filter_input(INPUT_POST, 'comment'));
 		$context_id = trim(filter_input(INPUT_POST, 'context_id', FILTER_SANITIZE_STRING));
+
+		// Check that comment length is not to large.
+		if (strlen($comment) > $maxLength) {
+			die("Error: Your comment exceeds the maximum allowed length.");
+		}
 	
 		// Validate required fields
 		if (empty($name) || empty($comment) || empty($context_id)) {
