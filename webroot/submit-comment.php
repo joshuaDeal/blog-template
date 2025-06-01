@@ -20,7 +20,7 @@ if ($user_ans == $ans) {
 		$comment = trim(filter_input(INPUT_POST, 'comment'));
 		$context_id = trim(filter_input(INPUT_POST, 'context_id', FILTER_SANITIZE_STRING));
 
-		// Check that comment length is not to large.
+		// Check that comment length is not too large.
 		if (strlen($comment) > $maxLength) {
 			die("Error: Your comment exceeds the maximum allowed length.");
 		}
