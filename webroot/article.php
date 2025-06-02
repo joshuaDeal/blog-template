@@ -95,6 +95,9 @@ include '/opt/blog/header.php';
 
 					<div class="captcha">
 						<?php
+							# Start a session.
+							session_start();
+
 							# Generate captcha text.
 							$chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 							$length = rand(4, 6);
@@ -102,6 +105,9 @@ include '/opt/blog/header.php';
 							for ($i = 0; $i < $length; $i++) {
 								$ans .= $chars[rand(0, strlen($chars) - 1)];
 							}
+
+							# Store the captcha answer in the session.
+							$_SESSION['captcha_ans'] = $ans;
 
 							# Generate random file name.
 							$file = '';
@@ -116,7 +122,6 @@ include '/opt/blog/header.php';
 
 							echo "<img src='/img/captcha/$file' alt='captcha image'>\n";
 							echo "<br>";
-							echo "<input type='hidden' name='ans' value='$ans'>\n";
 
 							echo "<label for='captcha'>Please type the text above:</label><br>";
 							echo "<input type='text' id='captcha' name='user_ans'><br>";

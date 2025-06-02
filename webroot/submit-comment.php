@@ -1,11 +1,13 @@
 <?php
 
+session_start();
+
 $maxLength = 500;
 
-$ans = trim(filter_input(INPUT_POST, 'ans', FILTER_SANITIZE_STRING));
+$ans = $_SESSION['captcha_ans'];
 $user_ans = trim(filter_input(INPUT_POST, 'user_ans', FILTER_SANITIZE_STRING));
 
-if ($user_ans == $ans) {
+if (isset($ans) && $user_ans == $ans) {
 	// Database configuration
 	$dbFile = '/opt/blog/blog.db';
 	
