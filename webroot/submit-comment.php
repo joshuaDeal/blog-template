@@ -8,6 +8,9 @@ $ans = $_SESSION['captcha_ans'];
 $user_ans = trim(filter_input(INPUT_POST, 'user_ans', FILTER_SANITIZE_STRING));
 
 if (isset($ans) && $user_ans == $ans) {
+	// Unset session's captcha_ans
+	unset($_SESSION['captcha_ans']);
+
 	// Database configuration
 	$dbFile = '/opt/blog/blog.db';
 	
