@@ -1,4 +1,7 @@
 <?php
+# Start a session.
+session_start();
+
 // Load database configuration
 $databaseFile = '/opt/blog/blog.db';
 
@@ -95,9 +98,6 @@ include '/opt/blog/header.php';
 
 					<div class="captcha">
 						<?php
-							# Start a session.
-							session_start();
-
 							# Generate captcha text.
 							$chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 							$length = rand(4, 6);
