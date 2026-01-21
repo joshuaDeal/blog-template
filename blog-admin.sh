@@ -58,101 +58,137 @@ evalArgs() {
 		if [ "${arguments[i]}" == "-n" ] || [ "${arguments[i]}" == "--name" ]; then
 			articleName=${arguments[i + 1]}
 			newArticleMode=true
+			i=$((i + 1))
+			continue
 		fi
  
 		# Get article title.
 		if [ "${arguments[i]}" == "-T" ] || [ "${arguments[i]}" == "--title" ]; then
 			articleTitle=${arguments[i + 1]}
 			newArticleMode=true
+			i=$((i + 1))
+			continue
 		fi
  
 		# Get article author.
 		if [ "${arguments[i]}" == "-a" ] || [ "${arguments[i]}" == "--author" ]; then
 			author=${arguments[i + 1]}
 			newArticleMode=true
+			i=$((i + 1))
+			continue
 		fi
  
 		# Get article description.
 		if [ "${arguments[i]}" == "-d" ] || [ "${arguments[i]}" == "--description" ]; then
 			description=${arguments[i + 1]}
 			newArticleMode=true
+			i=$((i + 1))
+			continue
 		fi
  
 		# Get article file path.
 		if [ "${arguments[i]}" == "-f" ] || [ "${arguments[i]}" == "--file" ]; then
 			articleFile=${arguments[i + 1]}
 			newArticleMode=true
+			i=$((i + 1))
+			continue
 		fi
  
 		# Get article tags.
 		if [ "${arguments[i]}" == "-t" ] || [ "${arguments[i]}" == "--tags" ]; then
 			articleTags=${arguments[i + 1]}
 			newArticleMode=true
+			i=$((i + 1))
+			continue
 		fi
  
 		# Get article image path.
 		if [ "${arguments[i]}" == "-i" ] || [ "${arguments[i]}" == "--image" ]; then
 			articleImage=${arguments[i + 1]}
 			newArticleMode=true
+			i=$((i + 1))
+			continue
 		fi
  
 		# Remove article.
 		if [ "${arguments[i]}" == "-ra" ] || [ "${arguments[i]}" == "--remove-article" ]; then
 			articleToRemove=${arguments[i + 1]}
 			removeArticleMode=true
+			i=$((i + 1))
+			continue
 		fi
  
 		# List comments for specific article.
 		if [ "${arguments[i]}" == "-lc" ] || [ "${arguments[i]}" == "--list-comments" ]; then
 			article=${arguments[i + 1]}
 			listCommentsMode=true
+			i=$((i + 1))
+			continue
 		fi
  
 		# Remove comment.
 		if [ "${arguments[i]}" == "-rc" ] || [ "${arguments[i]}" == "--remove-comment" ]; then
 			commentToRemove=${arguments[i + 1]}
 			removeCommentMode=true
+			i=$((i + 1))
+			continue
 		fi
  
 		# Toggle comment approval.
 		if [ "${arguments[i]}" == "-ac" ] || [ "${arguments[i]}" == "--approve" ]; then
 			commentToApprove=${arguments[i + 1]}
 			approveCommentMode=true
+			i=$((i + 1))
+			continue
 		fi
  
 		# List pending comments.
 		if [ "${arguments[i]}" == "-lp" ] || [ "${arguments[i]}" == "--list-pending" ]; then
 			listPendingCommentsMode=true
+			continue
 		fi
  
 		# List pending comments.
 		if [ "${arguments[i]}" == "-ur" ] || [ "${arguments[i]}" == "--update-rss" ]; then
 			updateRssMode=true
+			continue
 		fi
  
 		# Add author.
 		if [ "${arguments[i]}" == "-aa" ] || [ "${arguments[i]}" == "--add-author" ]; then
 			authorName=${arguments[i + 1]}
 			addAuthorMode=true
+			i=$((i + 1))
+			continue
 		fi
  
 		# Get author bio.
 		if [ "${arguments[i]}" == "-ab" ] || [ "${arguments[i]}" == "--author-bio" ]; then
 			authorBio=${arguments[i + 1]}
 			addAuthorMode=true
+			i=$((i + 1))
+			continue
 		fi
  
 		# Get author image.
 		if [ "${arguments[i]}" == "-ai" ] || [ "${arguments[i]}" == "--author-image" ]; then
 			authorImage=${arguments[i + 1]}
 			addAuthorMode=true
+			i=$((i + 1))
+			continue
 		fi
  
 		# remove author.
 		if [ "${arguments[i]}" == "-rA" ] || [ "${arguments[i]}" == "--remove-author" ]; then
 			authorName=${arguments[i + 1]}
 			removeAuthorMode=true
+			i=$((i + 1))
+			continue
 		fi
+
+		# Check for bad arguments.
+		printf "Error: Invalid arguments provided.\n" >&2
+		exit
 	done
 }
  
