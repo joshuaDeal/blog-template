@@ -414,7 +414,9 @@ updateRss() {
 		printf "\t\t\t<description><![CDATA[$description]]></description>\n"
 		printf "\t\t\t<author><![CDATA[$author]]></author>\n"
 		printf "\t\t\t<pubDate>$(date -u -d "$date" +"%a, %d %b %Y %H:%M:%S +0000")</pubDate>\n"
-		printf "\t\t\t<content:encoded><![CDATA[$(sed 's/]]>/]]]]><![CDATA[>/' "$file")]]></content:encoded>\n"
+		printf "\t\t\t<content:encoded><![CDATA["
+		sed 's/]]>/]]]]><![CDATA[>/' "$file"
+		printf "]]></content:encoded>\n"
 		printf "\t\t</item>\n"
 	done
  
